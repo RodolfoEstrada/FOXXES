@@ -322,19 +322,71 @@ h1 span{color:var(--red);display:block}
 .tile h3{font:600 25px 'Oswald';text-transform:uppercase}
 .tile p{font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px}
 
-/* ACADEMY */
-.academy{
-  min-height:245px;border:1px solid #292929;position:relative;overflow:hidden;
-  padding:45px 50px;margin-bottom:28px;
-  background:
-    linear-gradient(90deg,#080808 0%,rgba(8,8,8,.82) 42%,rgba(8,8,8,.35)),
-    radial-gradient(ellipse at 78% 50%,rgba(100,100,100,.25),transparent 35%);
+/* ACADEMY - IMAGEN DE FONDO AJUSTADA */
+/* CONTENEDOR MÁS COMPACTO Y CENTRADO */
+/* CONTENEDOR COMPACTO */
+/* CONTENEDOR CONTENIDO */
+/* BANNER ACADEMY CON LA NUEVA IMAGEN COMPLETA */
+.academy {
+  min-height: 280px;
+  max-width: 1000px;
+  margin: 0 auto 28px auto;
+  border: 1px solid #292929;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  
+  /* Imagen de fondo abarcando toda la tarjeta */
+  background-image: 
+    linear-gradient(90deg, rgba(5, 5, 5, 0.9) 0%, rgba(5, 5, 5, 0.4) 50%, rgba(5, 5, 5, 0.1) 100%),
+    url('academy_hero.png'); /* Guarda tu nueva foto con este nombre */
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
 }
-.academy:after{content:"10";position:absolute;right:8%;bottom:-40px;font:800 220px 'Oswald';color:rgba(255,255,255,.045)}
-.academy h2{font:700 50px 'Oswald';text-transform:uppercase}
-.academy h2 span{color:var(--red)}
-.academy p{color:#aaa;letter-spacing:2px;text-transform:uppercase;margin:9px 0 22px}
 
+/* Eliminamos el pseudo-elemento :after para quitar a los 3 chicos */
+.academy:after {
+  display: none;
+}
+
+/* ESTILOS DEL TEXTO Y BOTÓN SOBRE EL NUEVO FONDO */
+.academy h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 1;
+  position: relative;
+  z-index: 2;
+  letter-spacing: 1.5px;
+}
+
+.academy h2 span {
+  color: var(--red);
+}
+
+.academy p {
+  color: #d0d0d0;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 10px 0 22px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.academy .btn.primary {
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(215, 25, 32, 0.4);
+}
 /* CARRUSEL DE NOTICIAS INFINITO */
 .noticias-section { margin: 35px 0 40px; }
 .noticias-header {
@@ -531,7 +583,8 @@ footer a,footer p{display:block;color:#999;font-size:13px;margin:8px 0}
   <section class="academy" id="academia">
     <h2>HELLFOX <span>ACADEMY</span></h2>
     <p>Disciplina hoy. Grandes jugadores mañana.</p>
-    <a class="btn primary" href="#">Conoce la academia &nbsp; →</a>
+    <!-- Enlace ajustado para abrir un PDF genérico de la academia -->
+    <a class="btn primary" href="HellFox Academy.pdf" target="_blank">Conoce la academia &nbsp; →</a>
   </section>
 
   <section class="noticias-section" id="noticias">
